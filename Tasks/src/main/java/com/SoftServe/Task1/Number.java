@@ -2,12 +2,13 @@ package com.SoftServe.Task1;
 
 import java.util.Scanner;
 
-public class Number {
-    public int GetNumber(int n){
-        int num = n;
-        return num;
+class Number {
+    private int n;
+    Number(int n){
+        this.n = n;
     }
-    public int[] SplitNumber(int n){
+
+    public int[] SplitNumber(){
         int [] arrayOfNumbers = new int[3];
         int num = n;
         int[] b = new int[3];
@@ -17,8 +18,8 @@ public class Number {
         }
         return arrayOfNumbers;
     }
-    public void PitCheck(int n[]){
-        int[] arrayOfNumbers = n;
+    public void PitCheck(){
+        int[] arrayOfNumbers = SplitNumber();
         if(arrayOfNumbers[0]>arrayOfNumbers[1]&&arrayOfNumbers[2]>arrayOfNumbers[1]){
             System.out.println("This number is a gap!");
         }else System.out.println("This number isn't a gap!");
